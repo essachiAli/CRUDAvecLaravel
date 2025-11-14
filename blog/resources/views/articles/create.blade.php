@@ -7,6 +7,7 @@
     @csrf
 
     <div style="margin-bottom:.75rem;">
+
       <label for="title">Titre *</label><br>
       <input id="title" name="title" type="text"
              value="{{ old('title') }}" required
@@ -14,9 +15,11 @@
       @error('title')
         <div style="color:#b91c1c;font-size:.9rem;">{{ $message }}</div>
       @enderror
+      
     </div>
 
     <div style="margin-bottom:.75rem;">
+
       <label for="slug">Slug</label><br>
       <input id="slug" name="slug" type="text"
              value="{{ old('slug') }}" placeholder="ex : mon-super-article"
