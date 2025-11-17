@@ -32,6 +32,7 @@ class StoreArticleRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'min:3', 'max:150'],
             'slug' => ['required', 'string', 'max:180', 'unique:articles,slug'],
+            'excerpt' => ['nullable', 'string', 'max:255'],
             'content' => ['required', 'string', 'min:20']
         ];
     }
@@ -49,5 +50,5 @@ class StoreArticleRequest extends FormRequest
             'content' => 'contenu'
         ];
     }
-    
+
 }
